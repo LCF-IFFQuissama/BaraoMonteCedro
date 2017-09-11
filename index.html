@@ -38,9 +38,28 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+    	window.onload = function() {
+    		if(window.innerWidth < 660 && window.innerHeight < 715) {
+    			//document.getElementById("body").style.transform = "rotate(90deg)";	
+    			screen.orientation.lock('landscape');
+    		}
+    		else if(window.innerWidth == window.innerHeight < 715) {
+    			//document.getElementById("body").style.transform = "rotate(0deg)";
+    			screen.orientation.unlock();
+    		}
+    		else if(window.innerWidth < (window.innerHeight/2)) {
+    			//document.getElementById("body").style.transform = "rotate(90deg)";
+    			screen.orientation.lock('landscape');
+    		}
+
+    		//alert("Orientation type is " + screen.orientation.type);
+    	}
+    </script>
+
 </head>
 
-<body>
+<body id="body">
 
     <!--nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
