@@ -57,6 +57,24 @@ footer {
     background-color: #eee;
 }
 
+/* Carrousel tutorial image */
+
+#tutorial-1 {
+    background-image: url('../img/small - 00-1.png');
+}
+#tutorial-2 {
+    background-image: url('../img/small - 00-2.png');
+}
+
+    @media screen and (min-width: 600px), screen and (min-height: 410px) {
+        #tutorial-2 {
+            background-image:url('../img/00-2.png');
+        }
+        #tutorial-1 {
+            background-image: url('../img/00-1.png');
+        }
+    }
+
 /* Snackbar Style */
 
 #mensagem {

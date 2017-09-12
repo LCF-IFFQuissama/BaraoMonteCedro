@@ -41,11 +41,12 @@
     <script type="text/javascript">
     	var x = false;
     	window.onload = function() {
-    		if(window.innerWidth < 660 && window.innerHeight < 715) {
+    		if (window.matchMedia("(orientation: portrait)").matches) {
     			show();
     		}
-    		else if(((window.innerWidth*2-100)) < window.innerHeight) {
-    			show();
+    		if(innerWidth > 550) {
+    			$('#tutorial-1').css("background-image", "url(/img/small - 00-1.png)"); 
+    			$('#tutorial-2').css("background-image", "url(/img/small - 00-2.png)"); 
     		}
     	}
 
@@ -75,8 +76,8 @@
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill">
-                    <div style="background-image:url('img/00-2.png')" class="back"></div>
-                    <div style="background-image:url('img/00-1.png')" class="front"></div>
+                    <div class="back" id="tutorial-2"></div>
+                    <div class="front" id="tutorial-1"></div>
                 </div>
             </div>
             <div class="item">
@@ -134,7 +135,7 @@
         </a>
 
     </header>
-    
+
     <footer>
         <div class="container">
             <div class="row" style="text-align: center">
