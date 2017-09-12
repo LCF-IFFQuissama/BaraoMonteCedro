@@ -39,27 +39,36 @@
     <![endif]-->
 
     <script type="text/javascript">
+    	var x = false;
     	window.onload = function() {
     		if(window.innerWidth < 660 && window.innerHeight < 715) {
-    			//document.getElementById("body").style.transform = "rotate(90deg)";	
-    			screen.orientation.lock('landscape');
+    			show();
     		}
-    		else if(window.innerWidth == window.innerHeight < 715) {
-    			//document.getElementById("body").style.transform = "rotate(0deg)";
-    			screen.orientation.unlock();
+    		else if(((window.innerWidth*2-100)) < window.innerHeight) {
+    			show();
     		}
-    		else if(window.innerWidth < (window.innerHeight/2)) {
-    			//document.getElementById("body").style.transform = "rotate(90deg)";
-    			screen.orientation.lock('landscape');
-    		}
+    	}
 
-    		//alert("Orientation type is " + screen.orientation.type);
+    	function show() {
+			if(x == false) {
+	    		var mensagem = $("#mensagem");
+	    		mensagem.show();
+	    		setTimeout(
+    				function(){
+    					mensagem.hide();
+					}, 5000);
+	    		x = true;
+	    	}
     	}
     </script>
 
 </head>
 
 <body id="body">
+
+	<div id="mensagem">
+		Por favor, vire a tela do seu aparelho para um melhor funcionamento do site...
+	</div>
 
     <header id="myCarousel" class="carousel slide">
 
@@ -125,8 +134,7 @@
         </a>
 
     </header>
-
-
+    
     <footer>
         <div class="container">
             <div class="row" style="text-align: center">
