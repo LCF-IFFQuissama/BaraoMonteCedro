@@ -30,8 +30,8 @@
 	<meta property="og:site_name" content="Barão de Monte Cedro" />
 	<meta property="fb:admins" content="100005001484429" />
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/full-slider.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -46,20 +46,6 @@
 		Por favor, vire a tela do seu aparelho para um melhor funcionamento do site...
 	</div>
 
-    <div class="modal" id="option">
-        <div class="modal-dialog">
-            <div class="modal-content" style="text-align: center;">
-                <div class="modal-body">
-                    <h4>Você deseja usar o site utilizando a transição automática de imagens, ou não?</h4>
-                </div>
-                <div class="modal-footer" style="text-align: center;">
-                    <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal">Não</button>
-                    <a href="automatic/" class="btn btn-lg btn-success">Sim</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <header id="myCarousel" class="carousel slide">
 
         <div class="carousel-inner">
@@ -71,8 +57,8 @@
             </div>
             <div class="item">
                 <div class="fill">
-                    <div style="background-image:url('img/1-Antes.jpg')" class="back"></div>
-                    <div style="background-image:url('img/1-Hoje.JPG')" class="front"></div>
+                    <div style="background-image:url('../img/2-Antes.jpg')" class="back" id="tutorial-4"></div>
+                    <div style="background-image:url('../img/2-Hoje.JPG')" class="front" id="tutorial-3"></div>
                 </div>
                 <div class="carousel-caption">
                     <h5>Legenda</h5>
@@ -80,8 +66,8 @@
             </div>
             <div class="item">
                 <div class="fill">
-                    <div style="background-image:url('img/2-Antes.jpg')" class="back"></div>
-                    <div style="background-image:url('img/2-Hoje.JPG')" class="front"></div>
+                    <div style="background-image:url('../img/3-Antes.jpg')" class="back" id="tutorial-6"></div>
+                    <div style="background-image:url('../img/3-Hoje.JPG')" class="front" id="tutorial-5"></div>
                 </div>
                 <div class="carousel-caption">
                     <h5>Legenda</h5>
@@ -89,8 +75,8 @@
             </div>
             <div class="item">
                 <div class="fill">
-                    <div style="background-image:url('img/3-Antes.jpg')" class="back"></div>
-                    <div style="background-image:url('img/3-Hoje.JPG')" class="front"></div>
+                    <div style="background-image:url('../img/4-Antes.jpg')" class="back" id="tutorial-8"></div>
+                    <div style="background-image:url('../img/4-Hoje.jpeg')" class="front" id="tutorial-7"></div>
                 </div>
                 <div class="carousel-caption">
                     <h5>Legenda</h5>
@@ -98,8 +84,8 @@
             </div>
             <div class="item">
                 <div class="fill">
-                    <div style="background-image:url('img/4-Antes.jpg')" class="back"></div>
-                    <div style="background-image:url('img/4-Hoje.jpeg')" class="front"></div>
+                    <div style="background-image:url('../img/5-Antes.JPG')" class="back" id="tutorial-10"></div>
+                    <div style="background-image:url('../img/5-Hoje.jpg')" class="front" id="tutorial-9"></div>
                 </div>
                 <div class="carousel-caption">
                     <h5>Legenda</h5>
@@ -107,8 +93,8 @@
             </div>
             <div class="item">
                 <div class="fill">
-                    <div style="background-image:url('img/5-Antes.JPG')" class="back"></div>
-                    <div style="background-image:url('img/5-Hoje.jpg')" class="front"></div>
+                    <div style="background-image:url('../img/1-Antes.jpg')" class="back" id="tutorial-12"></div>
+                    <div style="background-image:url('../img/1-Hoje.JPG')" class="front" id="tutorial-11"></div>
                 </div>
                 <div class="carousel-caption">
                     <h5>Legenda</h5>
@@ -122,7 +108,6 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="icon-next"></span>
         </a>
-
     </header>
 
     <footer>
@@ -138,11 +123,27 @@
         </div>
     </footer>
 
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
-    <script src="js/bootstrap.js"></script>
+    <script src="../js/bootstrap.js"></script>
 
-    <script src="js/functions.js"></script>
+    <script src="../js/functions.js"></script>
+
+    <script>
+        window.onload = function () {
+            i=1;
+            a = setInterval(timer, 2000);
+        }
+
+        function timer() {
+            classe = "#tutorial-"+i;
+            $(classe).css("opacity", "0");
+            i++;
+            if(i==13)
+                location.reload();
+        }
+
+    </script>
 
 </body>
 

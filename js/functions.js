@@ -1,5 +1,11 @@
 var x = false;
 window.onload = function() {
+
+	setTimeout(function(){
+		$('#option').modal('show');
+		$('#option').css("opacity", "1");
+	}, 1000);
+
 	if (window.matchMedia("(orientation: portrait)").matches) {
 		show();
 	}
@@ -23,6 +29,6 @@ function show() {
 
 $(document).ready(function(){
     $('.carousel').carousel({
-        interval: 7000
+        interval: 4000
     });
 });
