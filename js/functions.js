@@ -29,6 +29,6 @@ function show() {
 
 $(document).ready(function(){
     $('.carousel').carousel({
-        interval: 4000
+        interval: 6000
     });
 });
