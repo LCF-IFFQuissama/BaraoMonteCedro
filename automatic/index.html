@@ -42,23 +42,9 @@
 
 <body id="body">
 
-    <div id="mensagem">
-	Por favor, vire o dispositivo para uma melhor visualização do site...
-    </div>
-
-    <div class="modal" id="option">
-        <div class="modal-dialog">
-            <div class="modal-content" style="text-align: center;">
-                <div class="modal-body">
-                    <h4>Você deseja usar o site utilizando a transição automática de imagens?</h4>
-                </div>
-                <div class="modal-footer" style="text-align: center;">
-                    <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal">Não</button>
-                    <a href="automatic/" class="btn btn-lg btn-success">Sim</a>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div id="mensagem">
+		Por favor, vire o dispositivo para uma melhor visualização do site...
+	</div>
 
     <header id="myCarousel" class="carousel slide">
 
@@ -69,18 +55,8 @@
                     <div class="front" id="tutorial-1"></div>
                 </div>
             </div>
-            <div class="item"> <!--Engenho-->
-                <div class="fill">
-                    <div style="background-image:url('../img/1-Antes.jpg')" class="back" id="tutorial-12"></div>
-                    <div style="background-image:url('../img/1-Hoje.JPG')" class="front" id="tutorial-11"></div>
-                </div>
-                <div class="carousel-caption">
-                    <h3>Engenho Central de Quissamã (1877)</h3>
-                    <h5>A velha Usina marcou época em Quissamã, consolidando ideias ousadas do Barão. Hoje ela se encontra em ruínas, mas a agroindústria fluminense deve muito à sua trajetória centenária.</h5>
-                </div>
-            </div>
-            <div class="item"> <!--Igreja-->
-                <div class="fill">
+            <div class="item">
+                <div class="fill"> <!--Igreja-->
                     <div style="background-image:url('../img/2-Antes.jpg')" class="back" id="tutorial-4"></div>
                     <div style="background-image:url('../img/2-Hoje.JPG')" class="front" id="tutorial-3"></div>
                 </div>
@@ -119,8 +95,17 @@
                     <h5>Praça central de Campos dos Goytacazes que abriga o Solar do Visconde de Araruama, pai do Barão de Monte Cedro. Tombado pelo IPHAN e pelo INEPAC, o prédio sedia hoje o Museu Histórico de Campos.</h5>
                 </div>
             </div>
+            <div class="item"> <!--Engenho-->
+                <div class="fill">
+                    <div style="background-image:url('../img/1-Antes.jpg')" class="back" id="tutorial-12"></div>
+                    <div style="background-image:url('../img/1-Hoje.JPG')" class="front" id="tutorial-11"></div>
+                </div>
+                <div class="carousel-caption">
+                    <h3>Engenho Central de Quissamã (1877)</h3>
+                    <h5>A velha Usina marcou época em Quissamã, consolidando ideias ousadas do Barão. Hoje ela se encontra em ruínas, mas a agroindústria fluminense deve muito à sua trajetória centenária.</h5>
+                </div>
+            </div>
         </div>
-	    
     </header>
 
     <footer>
@@ -147,7 +132,6 @@
             i=1;
             a = setInterval(timer, 7000);
         }
-
         function timer() {
             classe = "#tutorial-"+i;
             $(classe).css("opacity", "0");
@@ -155,7 +139,6 @@
             if(i==13)
                 location.reload();
         }
-
     </script>
 
 </body>
